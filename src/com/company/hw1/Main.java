@@ -5,10 +5,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.print("Enter name-> ");
         Scanner in = new Scanner(System.in);
-        String name = in.nextLine();
 
+        String name = "Artem";
         String serName = "Anikin";
         System.out.println(name + ' ' + serName);
         checkNameLength(name);
