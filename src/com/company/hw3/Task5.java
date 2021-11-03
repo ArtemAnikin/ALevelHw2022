@@ -23,7 +23,7 @@ public class Task5 {
                     System.out.println(x + "*" + y + "=" + ((double) x * y));
                     break;
                 case "/":
-                    System.out.println(x + "/" + y + "=" + (x / (double) y));
+                    System.out.println(y == 0 ? "Error cannot be divided by 0 " : (x + "/" + y + "=" + (x / (double) y)));
                     break;
                 default:
                     System.out.print("Choose correct symbol (\"+,-,*,/\") or \"exit\" ->");
