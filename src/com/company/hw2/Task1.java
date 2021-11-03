@@ -30,13 +30,13 @@ public class Task1 {
     }
 
     public static void minModuleNumber(int number1, int number2, int number3) {
-        int mas[] = {number1, number2, number3};
+        int[] mas = {number1, number2, number3};
         for (int i = 0; i < mas.length; i++) {
             System.out.print(mas[i] < 0 ? (mas[i] *= (-1)) + " " : mas[i] + " ");
         }
         int min = mas[0];
-        for (int i = 0; i < mas.length; i++) {
-            min = min > mas[i] ? min = mas[i] : min;
+        for (int ma : mas) {
+            min = min > ma ? ma : min;
         }
         System.out.print(System.lineSeparator());
         System.out.println("min module number = " + min);
