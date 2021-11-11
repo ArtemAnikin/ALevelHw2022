@@ -8,6 +8,7 @@ public class Task5 {
         int input = checkNumber();
         int[] mas = new int[input];
         fillingAndPrintTheArray(input, mas);
+        System.out.println(Arrays.toString(createNewEvenArray(mas)));
 
     }
 
@@ -28,19 +29,26 @@ public class Task5 {
             mas[i] = (int) (Math.random() * input);
             System.out.print(mas[i] + " ");
         }
+        System.out.print(System.lineSeparator());
     }
 
-    /*private static void createNewEvenArray(int[] mas){
+    private static int[] createNewEvenArray(int[] mas) {
         int numberOfEvenElements = 0;
         for (int element : mas) {
-            if(element%2==0){
+            if (element % 2 == 0) {
                 numberOfEvenElements++;
             }
         }
+        int count = 0;
         int[] evenMas = new int[numberOfEvenElements];
-        for (int element : mas){
-
+        for (int element : mas) {
+            if (element % 2 == 0) {
+                evenMas[count] = element;
+                count++;
+            }
         }
-    }*/
+        System.out.println("Number or even elements-> " + numberOfEvenElements);
+        return evenMas;
+    }
 
 }
