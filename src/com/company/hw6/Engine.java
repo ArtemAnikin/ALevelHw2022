@@ -3,11 +3,8 @@ package com.company.hw6;
 import com.company.hw6.Enum.EngineTypeEnum;
 
 public class Engine {
-    protected double power;
-    public EngineTypeEnum engineTypeEnum;
-
-    public Engine() {
-    }
+    private double power;
+    private EngineTypeEnum engineTypeEnum;
 
     public void setPower(double power) {
         this.power = power;

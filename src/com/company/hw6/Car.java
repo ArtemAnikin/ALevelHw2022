@@ -10,11 +10,9 @@ public class Car {
     private final Engine engine = new Engine();
     private int fuel;
 
-    public Car(ManufacturerEnum manufacturerEnum, ColorEnum colorEnum, double power, EngineTypeEnum engineTypeEnum) {
+    public Car(ManufacturerEnum manufacturerEnum, ColorEnum colorEnum) {
         this.manufacturerEnum = manufacturerEnum;
         this.colorEnum = colorEnum;
-        this.engine.setPower(power);
-        this.engine.setEngineTypeEnum(engineTypeEnum);
         this.fuel = 100;
     }
 
@@ -65,6 +63,6 @@ public class Car {
     }
 
     public boolean isEnoughPetrolLevel() {
-        return fuel >= 50; //можно так использовать или лучше не нужно?)
+        return fuel >= 50;
     }
 }

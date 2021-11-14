@@ -8,10 +8,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        Car car1 = new Car(ManufacturerEnum.BMW, ColorEnum.BLACK, 3.0, EngineTypeEnum.ELECTRO);
-        Car car2 = new Car(ManufacturerEnum.AUDI, ColorEnum.GREEN, 2.5, EngineTypeEnum.PETROL);
-        Car car3 = new Car(ManufacturerEnum.MERCEDES, ColorEnum.RED, 2.0, EngineTypeEnum.DIESEL);
-        Garage garage = new Garage(); //что от меня хочет idea??
+        Car car1 = new Car(ManufacturerEnum.BMW, ColorEnum.BLACK);
+        Car car2 = new Car(ManufacturerEnum.AUDI, ColorEnum.GREEN);
+        Car car3 = new Car(ManufacturerEnum.MERCEDES, ColorEnum.RED);
         System.out.println(car1);
         System.out.println(car2);
         System.out.println(car3);
