@@ -1,6 +1,8 @@
 package com.company.moduleHw8;
 
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         int[] mas = UserInputService.createTheArray();
@@ -9,7 +11,7 @@ public class Main {
         lock.printArray();
         lock.getMas()[0] = 10;
         lock.printArray();
-        WorkWithArray.printTheArray(mas);
+        System.out.println(Arrays.toString(mas));
         UserInputService.doAction(mas);
     }
 }
