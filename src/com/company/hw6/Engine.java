@@ -6,6 +6,12 @@ public class Engine {
     private double power;
     private EngineTypeEnum engineTypeEnum;
 
+
+    Engine(double power, EngineTypeEnum engineTypeEnum){
+        this.power = power;
+        this.engineTypeEnum = engineTypeEnum;
+    }
+
     public void setPower(double power) {
         this.power = power;
     }

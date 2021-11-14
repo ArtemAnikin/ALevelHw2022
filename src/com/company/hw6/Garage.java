@@ -6,18 +6,15 @@ public class Garage {
         double mustPower = 2.0;
         if (car.isEnoughPetrolLevel()) {
             if (car.getEngine().getPower() > mustPower) {
-                System.out.print("Success");
-                System.out.println(System.lineSeparator());
-                System.out.print("Уровень топлина -> " + car.getFuel());
-                System.out.println(System.lineSeparator());
+                System.out.println("Success");
+                System.out.println("Уровень топлина -> " + car.getFuel());
                 System.out.println("power -> " + car.getEngine().getPower());
             } else {
                 System.out.println("Error");
                 System.out.println("power < " + mustPower);
             }
         } else {
-            System.out.print("Error");
-            System.out.println(System.lineSeparator());
+            System.out.println("Error");
             System.out.println("Уровень топлина меньше " + 50);
         }
     }

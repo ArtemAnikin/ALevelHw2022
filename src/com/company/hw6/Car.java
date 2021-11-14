@@ -7,10 +7,11 @@ import com.company.hw6.Enum.ManufacturerEnum;
 public class Car {
     private ManufacturerEnum manufacturerEnum;
     private ColorEnum colorEnum;
-    private final Engine engine = new Engine();
+    private final Engine engine;
     private int fuel;
 
-    public Car(ManufacturerEnum manufacturerEnum, ColorEnum colorEnum) {
+    public Car(ManufacturerEnum manufacturerEnum, ColorEnum colorEnum,double power, EngineTypeEnum engineTypeEnum) {
+        this.engine = new Engine(power,engineTypeEnum);
         this.manufacturerEnum = manufacturerEnum;
         this.colorEnum = colorEnum;
         this.fuel = 100;
