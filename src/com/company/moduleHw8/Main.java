@@ -1,7 +1,5 @@
 package com.company.moduleHw8;
 
-import java.util.Arrays;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,9 +9,7 @@ public class Main {
         lock.printArray();
         lock.getMas()[0] = 10;
         lock.printArray();
-        System.out.println(Arrays.toString(mas));
+        WorkWithArray.printTheArray(mas);
         UserInputService.doAction(mas);
     }
-
-
 }

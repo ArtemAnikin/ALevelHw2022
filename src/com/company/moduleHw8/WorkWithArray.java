@@ -2,9 +2,11 @@ package com.company.moduleHw8;
 
 
 import java.util.Arrays;
-import java.util.concurrent.RecursiveTask;
 
 public class WorkWithArray {
+    public static void printTheArray(int[] mas) {
+        System.out.println(Arrays.toString(mas));
+    }
 
     public static void fillingTheArray(int[] mas) {
         for (int i = 0; i < mas.length; i++) {
