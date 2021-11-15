@@ -9,10 +9,10 @@ public class Lock {
         this.mas = mas;
     }
     public void printArray(){
-        System.out.println(Arrays.toString(Arrays.copyOf(mas,mas.length)));
+        System.out.println(Arrays.toString(mas.clone()));
     }
 
     public int[] getMas() {
-        return Arrays.copyOf(mas,mas.length);
+        return mas.clone();
     }
 }

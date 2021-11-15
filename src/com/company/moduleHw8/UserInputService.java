@@ -4,20 +4,20 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class UserInputService {
-    private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner SCANNER = new Scanner(System.in);
 
-    public static int[] createTheArray() {
+    public int[] createTheArray() {
         System.out.print("Enter array dimension-> ");
-        int arrayDimension = scanner.nextInt();
+        int arrayDimension = SCANNER.nextInt();
 
         while (arrayDimension < 10) {
             System.out.print("Enter number more then '9' -> ");
-            arrayDimension = scanner.nextInt();
+            arrayDimension = SCANNER.nextInt();
         }
         return new int[arrayDimension];
     }
 
-    public static void doAction(int[] mas) {
+    public void doAction(int[] mas) {
         StringBuilder builder = new StringBuilder("Выберете действие: ").append(System.lineSeparator());
         int menuNumber = 0;
         builder.append(menuNumber++).append(") Выйти ").append(System.lineSeparator());
@@ -28,11 +28,11 @@ public class UserInputService {
         int userAction;
         while (true) {
             System.out.print(builder);
-            userAction = scanner.nextInt();
+            userAction = SCANNER.nextInt();
             switch (userAction) {
                 case 0:
                     System.out.println("Вы закрыли программу!");
-                    scanner.close();
+                    SCANNER.close();
                     System.exit(0);
                     break;
                 case 1:
