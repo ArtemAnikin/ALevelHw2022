@@ -1,37 +1,19 @@
 package com.company.hw7.actions;
-
-import com.company.hw7.model.Animal;
-
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Shop {
-    private final Scanner scanner = new Scanner(System.in);
 
-    public void doAction(Animal animal) {
-        int menuNumber = 0;
-        StringBuilder createUserMenu = new StringBuilder("Chose action ").append("\n")
-                .append(menuNumber++).append(") ").append("Выйти в главное меню").append("\n")
-                .append(menuNumber++).append(") ").append("Купить подарок за 100").append("\n")
-                .append(menuNumber++).append(") ").append("Купить подарок за 150").append("\n")
-                .append(menuNumber++).append(") ").append("Купить подарок за 200").append("\n");
+    public String getRandomName(int length) {
+        StringBuilder PresentName = new StringBuilder();
+        for (int i = 0; i < length; i++) {
+            PresentName.append((char) (Math.random() * 26 + 97));
+        }
+        return PresentName.toString();
+    }
 
-
-        int userInputMenuNumber;
-        while (true) {
-            System.out.println(animal);
-            System.out.print(createUserMenu);
-            userInputMenuNumber = scanner.nextInt();
-            switch (userInputMenuNumber) {
-                case 0:
-                    System.exit(0);
-                    break;
-                case 1:
-
-                    break;
-                case 2:
-
-                    break;
-            }
+    public void printPresents(ArrayList<String> presents){
+        for (String element : presents){
+            System.out.println(element + " ");
         }
     }
 }

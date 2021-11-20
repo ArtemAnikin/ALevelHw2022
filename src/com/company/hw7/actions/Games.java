@@ -2,8 +2,6 @@ package com.company.hw7.actions;
 
 import com.company.hw7.model.Animal;
 
-import java.util.Random;
-
 public class Games {
     private int gamesCount;
 

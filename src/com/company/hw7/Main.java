@@ -1,5 +1,4 @@
 package com.company.hw7;
-
 import com.company.hw7.service.UserCreateAnimal;
 import com.company.hw7.service.UserInputService;
 

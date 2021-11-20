@@ -1,7 +1,7 @@
 package com.company.hw7.model;
-
-
 import com.company.hw7.ConstCoefficients;
+
+//import java.util.ArrayList;
 
 public class Animal {
     private final String name;
@@ -12,17 +12,17 @@ public class Animal {
     private int clear;
     private double happy;
     private boolean isSick = false;
+    //private ArrayList<String> Presents = new ArrayList<String>(4);
 
     public Animal(String name, AnimalTypeEnum animalTypeEnum) {
         this.name = name;
         this.animalTypeEnum = animalTypeEnum;
         this.age = 1;
-        this.hungry = 100;
+        this.hungry = 40;
         this.money = 0;
         this.clear = 100;
         this.happy = 50;
     }
-
 
     public void addAge(int age) {
         this.age += age;
@@ -46,6 +46,10 @@ public class Animal {
         return isSick;
     }
 
+    public double getHappy() {
+        return happy;
+    }
+
     public int getAge() {
         return age;
     }
@@ -63,7 +67,7 @@ public class Animal {
     }
 
     public void addHungry(double hungry) {
-        hungry *= clear < 0 ? createIndexNegativeEffects() : 1;
+        hungry *= hungry < 0 ? createIndexNegativeEffects() : 1;
         this.hungry += hungry;
     }
 
@@ -86,7 +90,7 @@ public class Animal {
     }
 
     public void addHappy(double happy) {
-        happy *= clear < 0 ? createIndexNegativeEffects() : 1;
+        happy *= happy < 0 ? createIndexNegativeEffects() : 1;
         this.happy += happy;
 
     }

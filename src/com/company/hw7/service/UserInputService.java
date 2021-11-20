@@ -2,7 +2,6 @@ package com.company.hw7.service;
 
 import com.company.hw7.actions.*;
 import com.company.hw7.model.Animal;
-import com.company.hw7.model.AnimalTypeEnum;
 
 import java.util.Scanner;
 
@@ -10,7 +9,7 @@ public class UserInputService {
     private static final Scanner SCANNER = new Scanner(System.in);
     private final Food food = new Food();
     private final Games games = new Games();
-    private final Shop shop = new Shop();
+    private final UserShopService userShopService = new UserShopService();
     private final Work work = new Work();
     private final Medication medication = new Medication();
 
@@ -43,7 +42,7 @@ public class UserInputService {
                     games.doAction(animal);
                     break;
                 case 3:
-                    shop.doAction(animal);
+                    userShopService.doAction(animal);
                     break;
                 case 4:
                     work.doAction(animal);
