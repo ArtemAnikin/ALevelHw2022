@@ -3,8 +3,6 @@ import com.company.hw7.ConstCoefficients;
 
 import java.util.ArrayList;
 
-//import java.util.ArrayList;
-
 public class Animal {
     private final String name;
     private final AnimalTypeEnum animalTypeEnum;
@@ -14,23 +12,23 @@ public class Animal {
     private int clear;
     private double happy;
     private boolean isSick = false;
-    private ArrayList<String> Presents = new ArrayList<>();
+    private String[] Presents = new String[2];
 
     public Animal(String name, AnimalTypeEnum animalTypeEnum) {
         this.name = name;
         this.animalTypeEnum = animalTypeEnum;
         this.age = 1;
         this.hungry = 40;
-        this.money = 4000;
+        this.money = 0;
         this.clear = 100;
         this.happy = 50;
     }
 
-    public ArrayList<String> getPresents() {
+    public String[] getPresents() {
         return Presents;
     }
 
-    public void setPresents(ArrayList<String> presents) {
+    public void setPresents(String[] presents) {
         Presents = presents;
     }
 

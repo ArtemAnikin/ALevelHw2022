@@ -12,6 +12,7 @@ public class UserShopService {
     public void doAction(Animal animal) {
         int presentNumber = 0;
         int presentPrisesIndex = 0;
+        int presentNameLength = 4;
         int happy = 0;
         int[] presentPrises = {100, 150, 200};
         StringBuilder createPresentUserMenu = new StringBuilder("Chose action").append("\n")
@@ -36,13 +37,15 @@ public class UserShopService {
                     break;
                 case 2:
                     happy = 25;
+                    presentNameLength = 5;
                     break;
                 case 3:
                     happy = 30;
+                    presentNameLength = 6;
                     break;
                 case 4:
-                    if (animal.getPresents().size() != 0) {
-                        System.out.println(animal.getPresents());
+                    if (animal.getPresents()[0] != null) {
+                        shop.printPresents(animal.getPresents());
                     } else {
                         System.out.println("У вас нету подарков");
                     }
@@ -54,11 +57,11 @@ public class UserShopService {
             }
             if (userInputPresentNumber >= 1 && userInputPresentNumber <= presentPrises.length) {
                 if (animal.getMoney() >= presentPrises[userInputPresentNumber - 1]) {
-                    shop.createPresent(animal, happy);
+                    String newPresentName = shop.createPresent(animal, happy, presentNameLength);
                     animal.addMoney(-presentPrises[userInputPresentNumber - 1]);
-                    System.out.printf("Подарок %s Успешно добавлен!", animal.getPresents().get(animal.getPresents().size()-1));
+                    System.out.printf("Подарок %s Успешно добавлен!", newPresentName);
                 } else {
-                    System.out.printf("У вас недостаточно денег, нужно -> %d", presentPrises[userInputPresentNumber - 1]);
+                    System.out.printf("У вас недостаточно денег, нужно -> %d \n", presentPrises[userInputPresentNumber - 1]);
                 }
             }
         }

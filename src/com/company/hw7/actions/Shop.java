@@ -3,6 +3,7 @@ package com.company.hw7.actions;
 import com.company.hw7.model.Animal;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Shop {
 
@@ -14,15 +15,28 @@ public class Shop {
         return PresentName.toString();
     }
 
-    public void createPresent(Animal animal, int happy) {
+    public String createPresent(Animal animal, int happy, int presentNameLength) {
         animal.addHappy(happy);
-        String presentsName = this.getRandomName(4);
-        animal.getPresents().add(animal.getPresents().size(), presentsName);
+        int lastElementIndex = 0;
+        for (int i = 0; i < animal.getPresents().length; i++) {
+            if (animal.getPresents()[i] == null) {
+                animal.getPresents()[i] = this.getRandomName(presentNameLength);
+                lastElementIndex = i;
+                break;
+            } else if (animal.getPresents()[animal.getPresents().length-1] != null) {
+                animal.setPresents(Arrays.copyOf(animal.getPresents(), animal.getPresents().length * 2));
+                animal.getPresents()[i] = this.getRandomName(presentNameLength);
+                lastElementIndex = i;
+            }
+        }
+        return animal.getPresents()[lastElementIndex];
     }
 
-    public void printPresents(ArrayList<String> presents) {
+    public void printPresents(String[] presents) {
         for (String element : presents) {
-            System.out.println(element + " ");
+            if(element != null){
+            System.out.println(element + ' ');
+            }
         }
     }
 }
