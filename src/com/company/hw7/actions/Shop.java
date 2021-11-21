@@ -1,8 +1,6 @@
 package com.company.hw7.actions;
 
 import com.company.hw7.model.Animal;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Shop {

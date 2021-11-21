@@ -1,8 +1,6 @@
 package com.company.hw7.model;
 import com.company.hw7.ConstCoefficients;
 
-import java.util.ArrayList;
-
 public class Animal {
     private final String name;
     private final AnimalTypeEnum animalTypeEnum;
