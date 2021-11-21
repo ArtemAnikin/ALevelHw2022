@@ -1,6 +1,8 @@
 package com.company.hw7.model;
 import com.company.hw7.ConstCoefficients;
 
+import java.util.ArrayList;
+
 //import java.util.ArrayList;
 
 public class Animal {
@@ -12,16 +14,24 @@ public class Animal {
     private int clear;
     private double happy;
     private boolean isSick = false;
-    //private ArrayList<String> Presents = new ArrayList<String>(4);
+    private ArrayList<String> Presents = new ArrayList<>();
 
     public Animal(String name, AnimalTypeEnum animalTypeEnum) {
         this.name = name;
         this.animalTypeEnum = animalTypeEnum;
         this.age = 1;
         this.hungry = 40;
-        this.money = 0;
+        this.money = 4000;
         this.clear = 100;
         this.happy = 50;
+    }
+
+    public ArrayList<String> getPresents() {
+        return Presents;
+    }
+
+    public void setPresents(ArrayList<String> presents) {
+        Presents = presents;
     }
 
     public void addAge(int age) {

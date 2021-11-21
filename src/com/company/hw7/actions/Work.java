@@ -13,6 +13,7 @@ public class Work {
                 int happy = -2;
                 animal.addHungry(hungry);
                 animal.addHappy(happy);
+                workCount++;
                 if (workCount == 6) {
                     animal.addAge(1);
                     workCount = 0;
